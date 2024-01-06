@@ -5,7 +5,7 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /app
 
 COPY ./src/backend /app
-COPY ./models/sentiment_models /app/models/sentiment_models
+COPY ./models/sentiment_model /app/models/sentiment_model
 COPY ./models/tokenizer.pkl /app/models/tokenizer.pkl
 
 RUN pip install --no-cache-dir -r requirements_backend.txt
