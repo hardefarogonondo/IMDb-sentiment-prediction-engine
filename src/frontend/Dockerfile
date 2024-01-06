@@ -6,7 +6,7 @@ WORKDIR /streamlit_app
 
 COPY . /streamlit_app/
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements_frontend.txt
 
 EXPOSE 8501
 

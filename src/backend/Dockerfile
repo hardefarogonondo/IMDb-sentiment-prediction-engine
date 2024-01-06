@@ -8,7 +8,7 @@ COPY ./src/back_end /app
 COPY ./models/sentiment_models /app/models/sentiment_models
 COPY ./models/tokenizer.pkl /app/models/tokenizer.pkl
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements_backend.txt
 
 EXPOSE 8000
 
