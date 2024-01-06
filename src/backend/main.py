@@ -6,8 +6,8 @@ from keras.preprocessing.sequence import pad_sequences
 import pickle
 
 # Initialization
-model = load_model('../../models/sentiment_model')
-with open('../../models/tokenizer.pkl', 'rb') as file:
+model = load_model('/app/models/sentiment_model')
+with open('/app/models/tokenizer.pkl', 'rb') as file:
     tokenizer = pickle.load(file)
 app = FastAPI()
 max_length = 300

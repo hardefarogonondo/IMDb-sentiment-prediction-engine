@@ -3,7 +3,7 @@ import requests
 import streamlit as st
 
 # Initialization
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = 'http://backend:8000/predict'
 
 # Main UI
 st.title("IMDb Sentiment Analysis Engine")
