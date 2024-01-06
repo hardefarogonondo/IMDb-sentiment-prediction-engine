@@ -3,18 +3,18 @@ services:
   backend:
     build:
       context: .
-      dockerfile: ./src/back_end/Dockerfile
+      dockerfile: ./src/backend/Dockerfile
     image: isae_back_end:latest
-    container_name: isae_back_end_container
+    container_name: isae_backend_container
     ports:
       - 8000:8000
 
   frontend:
     build:
       context: .
-      dockerfile: ./src/front_end/Dockerfile
+      dockerfile: ./src/frontend/Dockerfile
     image: isae_front_end:latest
-    container_name: isae_front_end_container
+    container_name: isae_frontend_container
     ports:
       - 8501:8501
     volumes:

@@ -4,7 +4,7 @@ ENV PYTHONUNBUFFERED 1
 
 WORKDIR /app
 
-COPY ./src/back_end /app
+COPY ./src/backend /app
 COPY ./models/sentiment_models /app/models/sentiment_models
 COPY ./models/tokenizer.pkl /app/models/tokenizer.pkl
 
