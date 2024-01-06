@@ -1,17 +1,18 @@
-import streamlit as st
+# Import Libraries
 import requests
+import streamlit as st
 
-st.title('IMDb Sentiment Analysis Engine')
+# Initialization
+API_URL = "http://127.0.0.1:8000/predict"
 
-API_URL = "http://127.0.0.1:8000/predict"  # Update with the actual URL if hosted
-
+# Main UI
+st.title("IMDb Sentiment Analysis Engine")
 user_review = st.text_area("Write your movie review here:")
 
-if st.button('Predict'):
+# Predict Sentiment Button
+if st.button("Predict"):
     if user_review:
-        # Send the review to the API for prediction
         response = requests.post(API_URL, json={"review": user_review})
-        
         if response.status_code == 200:
             data = response.json()
             result = data["result"]
